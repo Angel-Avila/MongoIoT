@@ -7,7 +7,7 @@ router.get('/', function (req, res) {
     });
 });
 
-// Import bulb controller
+//  Import bulb controller
 var bulbController = require('./BulbController');
 
 // Bulb routes
