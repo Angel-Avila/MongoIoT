@@ -1,4 +1,4 @@
-Bulb = require('./BulbModel');
+Bulb = require('../Model/BulbModel');
 
 exports.index = function (req, res) {
     Bulb.get(function (err, bulbs) {
