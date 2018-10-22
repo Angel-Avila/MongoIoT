@@ -6,7 +6,7 @@ var camSchema = mongoose.Schema({
 });
 
 // Export Cam model
-var Cam = module.exports = mongoose.model('cam', bulbSchema);
+var Cam = module.exports = mongoose.model('cam', camSchema);
 
 module.exports.get = function (callback, limit) {
     Cam.find(callback).limit(limit);
