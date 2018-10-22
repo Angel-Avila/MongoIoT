@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 // Setup schema
 var arrivalHourSchema = mongoose.Schema({
     person: String,
-    hour: Date
+    hour: Number
 });
 
 // Export arrival hours model
