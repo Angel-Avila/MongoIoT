@@ -8,11 +8,7 @@ exports.index = function (req, res) {
                 message: err,
             });
         }
-        res.json({
-            status: "success",
-            message: "Cams retrieved successfully",
-            data: cams
-        });
+        res.json(cams);
     });
 };
 
@@ -35,10 +31,7 @@ exports.view = function (req, res) {
     Cam.findById(req.params.cam_id, function (err, cam) {
         if (err)
             res.send(err);
-        res.json({
-            message: 'Cam details loading..',
-            data: cam
-        });
+        res.json(cam);
     });
 };
 

@@ -32,10 +32,7 @@ exports.view = function (req, res) {
     ArrivalHour.findById(req.params.arrivalHour_id, function (err, arrivalHour) {
         if (err)
             res.send(err);
-        res.json({
-            message: 'ArrivalHour details loading..',
-            data: arrivalHour
-        });
+        res.json(arrivalHour);
     });
 };
 

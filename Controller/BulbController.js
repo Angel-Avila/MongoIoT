@@ -8,11 +8,7 @@ exports.index = function (req, res) {
                 message: err,
             });
         }
-        res.json({
-            status: "success",
-            message: "Bulbs retrieved successfully",
-            data: bulbs
-        });
+        res.json(bulbs);
     });
 };
 
@@ -36,10 +32,7 @@ exports.view = function (req, res) {
     Bulb.findById(req.params.bulb_id, function (err, bulb) {
         if (err)
             res.send(err);
-        res.json({
-            message: 'Bulb details loading..',
-            data: bulb
-        });
+        res.json(bulb);
     });
 };
 
