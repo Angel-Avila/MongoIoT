@@ -8,11 +8,7 @@ exports.index = function (req, res) {
                 message: err,
             });
         }
-        res.json({
-            status: "success",
-            message: "ArrivalHours retrieved successfully",
-            data: arrivalHours
-        });
+        res.json(arrivalHours);
     });
 };
 
