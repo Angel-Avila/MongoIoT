@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 
 // Setup schema
 var camSchema = mongoose.Schema({
-    minutesOn: Number
+    minutesOn: Number,
+    isOn: Boolean
 });
 
 // Export Cam model

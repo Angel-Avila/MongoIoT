@@ -16,6 +16,7 @@ exports.new = function (req, res) {
     var bulb = new Bulb();
     bulb.minutesOn = req.body.minutesOn;
     bulb.minutesLeft = req.body.minutesLeft;
+    bulb.isOn = req.body.isOn;
 
     bulb.save(function (err) {
         // if (err)
@@ -45,6 +46,7 @@ exports.update = function (req, res) {
 
         bulb.minutesOn = req.body.minutesOn;
         bulb.minutesLeft = req.body.minutesLeft;
+        bulb.isOn = req.body.isOn;
 
     // save the bulb and check for errors
         bulb.save(function (err) {

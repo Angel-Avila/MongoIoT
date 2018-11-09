@@ -3,7 +3,8 @@ var mongoose = require('mongoose');
 // Setup schema
 var bulbSchema = mongoose.Schema({
     minutesOn: Number,
-    minutesLeft: Number
+    minutesLeft: Number,
+    isOn: Boolean
 });
 
 // Export Bulb model

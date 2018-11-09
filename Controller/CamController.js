@@ -15,6 +15,7 @@ exports.index = function (req, res) {
 exports.new = function (req, res) {
     var cam = new Cam();
     cam.minutesOn = req.body.minutesOn;
+    cam.isOn = req.body.isOn;
 
     cam.save(function (err) {
         // if (err)
@@ -43,6 +44,7 @@ exports.update = function (req, res) {
             res.send(err);
 
         cam.minutesOn = req.body.minutesOn;
+        cam.isOn = req.body.isOn;
 
     // save the cam and check for errors
         cam.save(function (err) {
