@@ -14,6 +14,7 @@ exports.index = function (req, res) {
 
 exports.new = function (req, res) {
     var bulb = new Bulb();
+    bulb.name = req.body.name;
     bulb.minutesOn = req.body.minutesOn;
     bulb.minutesLeft = req.body.minutesLeft;
     bulb.isOn = req.body.isOn;
@@ -44,6 +45,7 @@ exports.update = function (req, res) {
         if (err)
             res.send(err);
 
+        bulb.name = req.body.name;
         bulb.minutesOn = req.body.minutesOn;
         bulb.minutesLeft = req.body.minutesLeft;
         bulb.isOn = req.body.isOn;

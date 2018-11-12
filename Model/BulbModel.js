@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 // Setup schema
 var bulbSchema = mongoose.Schema({
+    name: String,
     minutesOn: Number,
     minutesLeft: Number,
     isOn: Boolean

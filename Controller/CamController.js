@@ -14,6 +14,7 @@ exports.index = function (req, res) {
 
 exports.new = function (req, res) {
     var cam = new Cam();
+    cam.name = req.body.name;
     cam.minutesOn = req.body.minutesOn;
     cam.isOn = req.body.isOn;
 
@@ -43,6 +44,7 @@ exports.update = function (req, res) {
         if (err)
             res.send(err);
 
+        cam.name = req.body.name;
         cam.minutesOn = req.body.minutesOn;
         cam.isOn = req.body.isOn;
 

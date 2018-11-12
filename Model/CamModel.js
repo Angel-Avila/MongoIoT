@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 // Setup schema
 var camSchema = mongoose.Schema({
+    name: String,
     minutesOn: Number,
     isOn: Boolean
 });

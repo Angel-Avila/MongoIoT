@@ -11,6 +11,7 @@ router.get('/', function (req, res) {
 var bulbController = require('../Controller/BulbController');
 var camController = require('../Controller/CamController');
 var arrivalHourController = require('../Controller/ArrivalHourController');
+var doorController = require('../Controller/DoorController');
 
 // Bulb routes
 router.route('/bulb')
@@ -44,6 +45,17 @@ router.route('/arrivalHour/:arrivalHour_id')
     .patch(arrivalHourController.update)
     .put(arrivalHourController.update)
     .delete(arrivalHourController.delete);
+
+// Door routes
+router.route('/door')
+    .get(doorController.index)
+    .post(doorController.new);
+
+router.route('/door/:door_id')
+    .get(doorController.view)
+    .patch(doorController.update)
+    .put(doorController.update)
+    .delete(doorController.delete);
 
 // Export API routes
 module.exports = router;
