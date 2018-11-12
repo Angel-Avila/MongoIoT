@@ -12,6 +12,9 @@
 * Ver la información de todos las focos:
 > [/api/bulb](http://ec2-54-149-173-24.us-west-2.compute.amazonaws.com:8081/api/bulb)
 
+* Ver la información de todas las puertas:
+> [/api/door](http://ec2-54-149-173-24.us-west-2.compute.amazonaws.com:8081/api/door)
+
 Al entrar, cualquiera de los objetos tiene un id. Si quieren que se les regrese la información de uno de los modelos en específico, tienen que ir a esos links y al final, ponerle un ‘/‘ y el id del objeto que quieren ver.
 
 Por ejemplo, si quieren ver la hora de llegada del objeto con id “5bcd26d59cb14b1462e97bbc”, tienen que ir a [este URL](http://ec2-54-149-173-24.us-west-2.compute.amazonaws.com:8081/api/arrivalHour/5bcd26d59cb14b1462e97bbc). Les dejo [otro ejemplo](http://ec2-54-149-173-24.us-west-2.compute.amazonaws.com:8081/api/bulb/5bcd05efdcf6e412f648f543) de esto por si las dudas.
@@ -27,8 +30,15 @@ En el *body* del request, tendrían que ir los valores del objeto nuevo que quie
 
 * Foco:
 ```
+name: String
 minutesOn: Number
 minutesLeft: Number
+isOn: Boolean
+```
+
+* Puerta:
+```
+name: String
 isOn: Boolean
 ```
 
@@ -42,6 +52,7 @@ La variable `hour` es un timestamp. Les dejo la referencia para que transformen 
 
 * Cámara:
 ```
+name: String
 minutesOn: Number
 isOn: Boolean
 ```
