@@ -7,6 +7,8 @@ let mongoose = require('mongoose');
 // Initialize the app
 let app = express();
 
+var path = require('path');
+
 // Import routes
 let apiRoutes = require("./Routes/api-routes")
 
@@ -24,7 +26,7 @@ var db = mongoose.connection;
 var port = process.env.PORT || 8081;
 
 // Send message for default URL
-app.get('/', (req, res) => res.sendFile('./index.html'));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname + '/index.html')));
 
 // Use Api routes in the App
 app.use('/api', apiRoutes)
